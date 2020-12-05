@@ -1,0 +1,46 @@
+@import "../Abstract/Variables.scss";
+
+.titlebar {
+  display: flex;
+  background-color: $tb-bar;
+  justify-content: flex-start;
+  align-items: center;
+  -webkit-app-region: drag;
+
+  &_title {
+    padding: 8px;
+    font-size: 12px;
+    height: 30px;
+  }
+
+  &_menu {
+    flex-grow: 1;
+    align-self: stretch;
+  }
+
+  &_window-control {
+    align-self: stretch;
+    background-color: $wc-bar;
+    flex-basis: 150px;
+    display: flex;
+    -webkit-app-region: no-drag;
+    user-select: none;
+
+    & div {
+      flex-basis: 130px;
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all ease-in-out 0.2s;
+
+      &:hover {
+        background-color: $wc-mm_h;
+      }
+
+      &:hover:last-child {
+        background-color: $wc-c_h;
+      }
+    }
+  }
+}

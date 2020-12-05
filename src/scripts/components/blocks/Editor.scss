@@ -1,0 +1,30 @@
+.tabs {
+  height: 100%;
+  display: flex;
+
+  & li {
+    align-self: stretch;
+    flex-basis: 100px;
+    text-align: center;
+    padding: 8px;
+    font-size: 10px;
+    background-color: #2d2d2d;
+    margin: 2px 0 0 2px;
+    list-style-type: none;
+    user-select: none;
+
+    &:last-child {
+      align-self: stretch;
+      flex-basis: 30px;
+      text-align: center;
+      font-size: 10px;
+      background-color: #2d2d2d;
+      margin: 2px 0 0 2px;
+      list-style-type: none;
+    }
+  }
+
+  & .active {
+    background-color: #1e1e1e;
+  }
+}
