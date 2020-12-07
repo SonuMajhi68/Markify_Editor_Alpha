@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
@@ -8,6 +9,17 @@ module.exports = {
   devtool: "inline-source-map",
 
   target: "electron-renderer",
+
+  plugins: [
+    // new webpack.optimize.OccurenceOrderPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
+    // new webpack.NoErrorsPlugin(),
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": '"development"',
+      global: {}, // bizarre lodash(?) webpack workaround
+      "global.GENTLY": false, // superagent client fix
+    }),
+  ],
 
   module: {
     rules: [

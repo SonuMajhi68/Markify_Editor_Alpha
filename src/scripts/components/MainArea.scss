@@ -43,6 +43,13 @@
     &_code {
       background-color: #1e1e1e;
       flex-grow: 1;
+
+      & .codemirror-wrapper {
+        height: 100%;
+        & .CodeMirror {
+          height: calc(100vh - 80px);
+        }
+      }
     }
   }
 
