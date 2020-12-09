@@ -20,6 +20,10 @@ function createWindow() {
 
   mainWindow.loadFile("index.html");
   mainWindow.openDevTools();
+  
+  mainWindow.on('closed', function(){
+    mainWindow = null;
+  });
 }
 
 app.whenReady().then(createWindow);
