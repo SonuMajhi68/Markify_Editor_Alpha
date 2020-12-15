@@ -1,0 +1,47 @@
+@import "../Abstract/Variables.scss";
+
+.workspace_codeEditor {
+  background-color: $ws-ce;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  &_tabs {
+    background-color: #252526;
+    flex-basis: 30px;
+  }
+
+  &_code {
+    background-color: #1e1e1e;
+    flex-grow: 1;
+
+    & .codemirror-wrapper {
+      height: 100%;
+      & .CodeMirror {
+        height: calc(100vh - 80px);
+      }
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px grey;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #504f4f;
+    border-radius: 10px;
+    transition: all ease-in-out 0.2s;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #474747;
+  }
+}

@@ -1,8 +1,10 @@
 .tabs {
   height: 100%;
   display: flex;
+  overflow-x: auto;
 
   & li {
+    min-width: 60px;
     align-self: stretch;
     flex-basis: 100px;
     text-align: center;
@@ -15,6 +17,7 @@
 
     &:last-child {
       align-self: stretch;
+      min-width: 30px;
       flex-basis: 30px;
       text-align: center;
       font-size: 10px;
@@ -26,5 +29,9 @@
 
   & .active {
     background-color: #1e1e1e;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }

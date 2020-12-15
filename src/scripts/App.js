@@ -1,7 +1,7 @@
 import React from "react";
 
 import TitleBar from "./components/TitleBar";
-import MainArea from "./components/MainArea";
+import MainArea from "./layouts/MainArea";
 import StatusBar from "./components/StatusBar";
 
 import "../scripts/Abstract/BaseStyle.scss";
