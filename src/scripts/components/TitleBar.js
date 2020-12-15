@@ -6,6 +6,8 @@ import "./TitleBar.scss";
 
 export default function TitleBar() {
   return (
+    // Here hold the title bar
+
     <div className="titlebar">
       <div className="titlebar_title">Markify</div>
       <div className="titlebar_menu">

@@ -2,9 +2,16 @@ import React from "react";
 
 import "./Menu.scss";
 
+// Here all title menu are present
+
 export default function Menu() {
+  // Here hold the logic for button click
+
   function myFunction(elem) {
     let men = document.getElementsByClassName("submenu");
+
+    // Here we remove class "show" form the submenu which is not clicked
+
     for (let i = 0; i < men.length; i++) {
       let openDropdown = men[i];
       if (openDropdown != elem)
@@ -13,7 +20,11 @@ export default function Menu() {
         }
     }
 
+    // Here simple toggle on and off in submenu clicked
+
     elem.classList.toggle("show");
+
+    // Here we add event listener to window , whenever user click elsewhere in window the submenu remove show class on all the submenu
 
     window.onclick = (event) => {
       if (event.target !== elem.parentElement) {
@@ -22,6 +33,8 @@ export default function Menu() {
     };
   }
   return (
+    // Menu and submenu structure
+
     <ul className="mainmenu">
       <li
         className="menu"

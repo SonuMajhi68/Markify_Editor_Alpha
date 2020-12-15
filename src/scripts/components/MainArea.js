@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { Controlled as ControlEditor } from "react-codemirror2";
 import "codemirror/lib/codemirror.css";
 import "codemirror/theme/material.css";
 import "codemirror/mode/markdown/markdown";
-import { Controlled as ControlEditor } from "react-codemirror2";
 
 import Editor from "./blocks/Editor";
 

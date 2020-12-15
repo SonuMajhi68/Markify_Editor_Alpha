@@ -1,3 +1,5 @@
+// This hold the resize logic for panel
+
 function ResizeableR(props) {
   let sideBar = props.parentElement;
   let prevX = 0;

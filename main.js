@@ -1,5 +1,6 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
+const fs = require("fs");
 
 let mainWindow;
 
@@ -12,7 +13,7 @@ function createWindow() {
     backgroundColor: "#333333",
     frame: false,
     webPreferences: {
-      nodeIntegration: true,
+      nodeIntegration: false,
       worldSafeExecuteJavaScript: true,
       contextIsolation: true,
     },
